@@ -32,7 +32,7 @@ const addWaifuText = text => {
  */
 const waifufyText = text => addWaifuText(mapToUpperCase(text))
 
-waifuBot.on('message', ({ chat: { id }, text }) => {
+waifuBot.on('text', ({ chat: { id }, text }) => {
     const waifufiedText = waifufyText(text)
     waifuBot.sendMessage(id, waifufiedText)
 })
