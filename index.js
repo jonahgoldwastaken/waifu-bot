@@ -17,11 +17,13 @@ const waifuDB = [
 const mapToUpperCase = text => text.toUpperCase()
 
 const addWaifuText = text => {
-    const waifuMood = waifuDB[Math.floor(Math.random() * (waifuDB.length - 1))]
-    if (waifuMood.length > 1)
-        return waifuMood[0].concat(text, waifuMood[1])
-    else
-        return text.concat(waifuMood[0])
+    if (Math.random() < .01) {
+        const waifuMood = waifuDB[Math.floor(Math.random() * (waifuDB.length - 1))]
+        if (waifuMood.length > 1)
+            return waifuMood[0].concat(text, waifuMood[1])
+        else
+            return text.concat(waifuMood[0])
+    }
 }
 
 /**
