@@ -17,13 +17,11 @@ const waifuDB = [
 const mapToUpperCase = text => text.toUpperCase()
 
 const addWaifuText = text => {
-    if (Math.random() < .2) {
         const waifuMood = waifuDB[Math.floor(Math.random() * (waifuDB.length - 1))]
         if (waifuMood.length > 1)
             return waifuMood[0].concat(text, waifuMood[1])
         else
             return text.concat(waifuMood[0])
-    }
 }
 
 /**
@@ -33,6 +31,9 @@ const addWaifuText = text => {
 const waifufyText = text => addWaifuText(mapToUpperCase(text))
 
 waifuBot.on('text', ({ chat: { id }, text }) => {
-    const waifufiedText = waifufyText(text)
-    waifuBot.sendMessage(id, waifufiedText)
+    console.log(text)
+    if (Math.random() < .01) {
+        const waifufiedText = waifufyText(text)
+        waifuBot.sendMessage(id, waifufiedText)
+    }
 })
