@@ -1,0 +1,29 @@
+{
+  "name": "waifu-bot",
+  "version": "1.0.0",
+  "description": "WAIFU DESSSUUU SENPAIIII",
+  "main": "index.js",
+  "private": false,
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theonejonahgold/waifu-bot.git"
+  },
+  "keywords": [],
+  "author": "Jonah Meijers <jonahmeijers97@gmail.com> (https://www.jonahmeijers.nl/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theonejonahgold/waifu-bot/issues"
+  },
+  "homepage": "https://github.com/theonejonahgold/waifu-bot#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  },
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "node-telegram-bot-api": "^0.30.0"
+  }
+}
