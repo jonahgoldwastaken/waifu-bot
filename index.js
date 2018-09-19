@@ -24,15 +24,10 @@ const addWaifuText = text => {
             return text.concat(waifuMood[0])
 }
 
-/**
- * 
- * @param {String} text 
- */
 const waifufyText = text => addWaifuText(mapToUpperCase(text))
 
 waifuBot.on('text', ({ chat: { id }, text }) => {
-    console.log(text)
-    if (Math.random() < .01) {
+    if (Math.random() <= .01) {
         const waifufiedText = waifufyText(text)
         waifuBot.sendMessage(id, waifufiedText)
     }
