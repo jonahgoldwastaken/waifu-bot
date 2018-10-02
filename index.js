@@ -27,7 +27,7 @@ const addWaifuText = text => {
 const waifufyText = text => addWaifuText(mapToUpperCase(text))
 
 waifuBot.on('text', ({ chat: { id }, text }) => {
-    if (Math.random() <= .01) {
+    if (Math.random() <= .0025) {
         const waifufiedText = waifufyText(text)
         waifuBot.sendMessage(id, waifufiedText)
     }
