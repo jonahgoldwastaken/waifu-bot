@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "dotenv": "^6.0.0",
+    "event-stream": "^3.3.4",
     "node-telegram-bot-api": "^0.30.0"
   }
 }
